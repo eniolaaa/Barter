@@ -16,7 +16,7 @@
 	input[type=text] {
 	border: none;
 	border-bottom: 1px solid black;
-	width: 40%;
+	width: 100%;
 	}
 	.container{
 		padding-left: 100px;
@@ -27,17 +27,17 @@
 	input[type=Email]{
 		border: none;
 		border-bottom: 1px solid black;
-		width: 40%;
+		width: 100%;
 	}
 	input[type=Password] {
 		border: none;
 		border-bottom: 1px solid black;
-		width: 40%;
+		width: 100%;
 	}
 	input[type=tel] {
 		border: none;
 		border-bottom: 1px solid black;
-		width: 40%;
+		width: 100%;
 	}
 	input[type=submit]{
 		background-color: #6673e5;
@@ -47,8 +47,8 @@
 		padding: 10px 20px;
 		width: 20%
 	}
-	u{
-		text-decoration: underline #6673e5; 
+	.nav span{
+		text-align: center
 	}
 	.button {
 		background-color: #6673e5;
@@ -81,7 +81,7 @@
 	}
 	h6{
 		color: blue;
-		padding-left: 300px;
+		float: right;
 	}
 	#social{
 		float: right;
@@ -91,13 +91,6 @@
 	h2{
 		margin-bottom: 50px;
 	}
-	/*
-	span {
-		float: right;
-		padding-right: 900px;
-		margin-top:  0px;
-	}
-	*/
 	img {
 		size: 50px;
 	}
@@ -106,23 +99,21 @@
 <body>
 <div class="container">
 <h2> barter <img src="barter.png" width="42" height="42" style="float:left"> </h2>
-<div id="social" class="right col-sm-5">
-<h3>You can sign in using your accounts <br> on these sites:</h3>
-<button class="button1">FACEBOOK</button> <br>
-<br>
-<button class="button2">GOOGLE</button> <br>
-<br>
+
+<div class="col-md-6">
+<div class="nav nav-tabs">
+<span class="active col-md-6"><a data-toggle="tab" href="#Register">Register</a></span>
+<span class="col-md-5 col-md-offset-1"><a data-toggle="tab" href="#Login">Login</a></span> <br>
 </div>
-<ul class="nav nav-tabs">
-<li class="active"><a data-toggle="tab" href="#Register">Register</a></li>
-<li><a data-toggle="tab" href="#Login">Login</a></li> <br>
 <div class="tab-content">
-<form> 
-<div id="Register" class="tab-pane fade in active">
-<div class="left col-sm-7"></div>
-		<br>
+<br>
 		<h5> Barter makes online payments safe and easy, with a new virtual card <br>for each place you pay online.</h5>
 		<br>
+
+<div id="Register" class="tab-pane fade in active">
+<div class="left ">
+		
+		<form>
 		First name <br>
 		<input type="text" name="Firstname"> <br>
 		<br>
@@ -143,12 +134,12 @@
 		<input type="tel" name="tel"> <br>
 		<br>
 		<button class="button" >Register account</button>
-</form>
+		</form>
+</div>
 </div>
 <div id="Login" class="tab-pane fade">
 <form>
-	<h5>Barter makes online payments safe and easy, with a new virtual card <br> for each place you pay online.</h5>
-	<br>
+	
 	Email address <br>
 	<input type="Email" name="Email"> <br>
 	<br>
@@ -160,6 +151,16 @@
 	<h4>Login with Phone Number?</h4>
 </form>
 </div>
+</div>
+</div>
+<div class=" col-md-6">
+	<div id="social" class="right col-sm-5">
+		<h3>You can sign in using your accounts <br> on these sites:</h3>
+		<button class="button1">FACEBOOK</button> <br>
+		<br>
+		<button class="button2">GOOGLE</button> <br>
+		<br>
+	</div>
 </div>
 </div>
 </body>
